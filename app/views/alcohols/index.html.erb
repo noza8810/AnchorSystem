@@ -1,0 +1,63 @@
+<% provide(:title, "All") %>
+
+<div class="center jumbotron">
+  <h1>Ancohor Eco System</h1>
+  <p>このシステムではお酒の種類や場所を検索することができます</p>
+</div>
+
+
+<div class="search">
+  <h2>Alcohol Searth</h2>
+  <%= form_with(scope: :search, url: alcohols_path, method: :get, local: true, class:"search_form") do |f| %>
+    <%= f.label(:name, '名前') %>
+    <%= f.text_field :name %>
+    <%= f.submit('検索') %>
+    
+  <% end %>
+</div>
+  
+<div class="col-md-10 col-md-offset-1">
+  <table class="table table-bordered table-condensed user-table">
+    <thead>
+      <tr>
+        <td>写真</td>
+        <td>名前</td>
+        <td>価格</td>
+        <td>場所</td>
+        <td>種類</td>
+        <td>特徴</td>
+        
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+     <% @alcohols.each do |alcohol| %>
+      <tr>
+         <td>
+           <!--<%=  link_to alcohol.image.url, 'data-lightbox': alcohol.image do %>-->
+           <!--  <%= image_tag alcohol.image.thumb.url if alcohol.image? %>-->
+           <!--<% end %>-->
+          
+         </td>
+          
+          <td><%= alcohol.name %></td>
+          <td><%= alcohol.price %></td>
+          <td>
+           <!--<%=  link_to alcohol.placephoto.url, 'data-lightbox': alcohol.placephoto do %>-->
+           <!--  <%= image_tag alcohol.placephoto.thumb.url if alcohol.placephoto? %>-->
+           <!--<% end %>-->
+          
+         </td>
+          <td><%= alcohol.kind %></td>
+          <td><%= alcohol.character %></td>
+          <td><%= link_to "編集", edit_alcohol_path(alchol), class: "btn btn-primary" %></td>
+          <td><%= link_to "削除", alcohol, method: :delete,
+                data: { confirm: "削除してよろしいですか？" },
+                class: "btn btn-danger" %>
+          </td>
+      </tr>
+      <% end %>
+
+    
+  </table>
+</div>

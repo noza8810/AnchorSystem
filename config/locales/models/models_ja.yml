@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      alchol: お酒
+    attributes:
+        alchol:
+          id: ID
+          name: 名前
+          price: 値段
+          created_at: 作成日
+          updated_at: 更新日
+          kind: 種類
+          character: 特徴
+          image: 画像
+          placephoto: お酒の場所
