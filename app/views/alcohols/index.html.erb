@@ -34,23 +34,18 @@
      <% @alcohols.each do |alcohol| %>
       <tr>
          <td>
-           <!--<%=  link_to alcohol.image.url, 'data-lightbox': alcohol.image do %>-->
-           <!--  <%= image_tag alcohol.image.thumb.url if alcohol.image? %>-->
-           <!--<% end %>-->
+     
           
          </td>
           
           <td><%= alcohol.name %></td>
           <td><%= alcohol.price %></td>
           <td>
-           <!--<%=  link_to alcohol.placephoto.url, 'data-lightbox': alcohol.placephoto do %>-->
-           <!--  <%= image_tag alcohol.placephoto.thumb.url if alcohol.placephoto? %>-->
-           <!--<% end %>-->
-          
+      
          </td>
           <td><%= alcohol.kind %></td>
           <td><%= alcohol.character %></td>
-          <td><%= link_to "編集", edit_alcohol_path(alchol), class: "btn btn-primary" %></td>
+          <td><%= link_to "編集", edit_alcohol_path(alcohol), class: "btn btn-primary" %></td>
           <td><%= link_to "削除", alcohol, method: :delete,
                 data: { confirm: "削除してよろしいですか？" },
                 class: "btn btn-danger" %>
