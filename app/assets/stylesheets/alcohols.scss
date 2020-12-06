@@ -1,3 +1,27 @@
-// Place all the styles related to the alcohols controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* お酒情報テーブル */
+
+.user-table {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.label-new{
+  margin-top: 5px;
+}
+
+.btn-new-alchol {
+  margin-top: 10px;
+}
+
+.label-edit {
+  margin-top: 5px;
+}
+
+.btn-alchol-edit {
+  margin-top: 10px;
+}
+
+.search_form {
+  text-align: center;
+  
+}
