@@ -34,18 +34,17 @@
      <% @alcohols.each do |alcohol| %>
       <tr>
          <td>
-           <!--<%=  link_to alcohol.image.url, 'data-lightbox': alcohol.image do %>-->
-           <!--  <%= image_tag alcohol.image.thumb.url if alcohol.image? %>-->
-           <!--<% end %>-->
+        
+             <%= image_tag alcohol.image.url if alcohol.image? %>
+       
           
          </td>
           
           <td><%= alcohol.name %></td>
           <td><%= alcohol.price %></td>
           <td>
-           <!--<%=  link_to alcohol.placephoto.url, 'data-lightbox': alcohol.placephoto do %>-->
-           <!--  <%= image_tag alcohol.placephoto.thumb.url if alcohol.placephoto? %>-->
-           <!--<% end %>-->
+             <%= image_tag alcohol.placephoto.url if alcohol.placephoto? %>
+        
           
          </td>
           <td><%= alcohol.kind %></td>
