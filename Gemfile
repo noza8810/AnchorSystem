@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '~> 5.1.6'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'dotenv-rails'
+gem 'mini_magick'
 gem 'rails-i18n'
 gem 'bcrypt'
 gem 'faker'

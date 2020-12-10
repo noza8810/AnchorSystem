@@ -1,6 +1,6 @@
 class Alcohol < ApplicationRecord
-  # mount_uploader :image, ImageUploader  
-  # mount_uploader :placephoto, ImageUploader  
+  mount_uploader :image, ImageUploader  
+  mount_uploader :placephoto, ImageUploader  
   
   validates :name, presence: true
   
