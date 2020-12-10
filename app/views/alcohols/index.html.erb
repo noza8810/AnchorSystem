@@ -34,7 +34,13 @@
      <% @alcohols.each do |alcohol| %>
       <tr>
          <td>
+<<<<<<< HEAD
              <%= image_tag alcohol.image.url if alcohol.image? %>
+=======
+        
+             <%= image_tag alcohol.image.url if alcohol.image? %>
+       
+>>>>>>> 0103ccb697660589c1b76f740defa6e2dfd5804e
           
          </td>
           
@@ -42,6 +48,10 @@
           <td><%= alcohol.price %></td>
           <td>
              <%= image_tag alcohol.placephoto.url if alcohol.placephoto? %>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 0103ccb697660589c1b76f740defa6e2dfd5804e
           
          </td>
           <td><%= alcohol.kind %></td>
