@@ -35,7 +35,7 @@
       <tr>
          <td>
            <%= link_to alcohol.image.url, "data-lightbox" => alcohol.image do %>
-             <%= image_tag alcohol.image.url if alcohol.image? %>
+             <%= image_tag alcohol.image.url(:thumb) if alcohol.image? %>
            <% end %>
         
          </td>
@@ -43,7 +43,9 @@
           <td><%= alcohol.name %></td>
           <td><%= alcohol.price %></td>
           <td>
-             <%= image_tag alcohol.placephoto.url if alcohol.placephoto? %>
+            <%= link_to alcohol.placephoto.url, "data-lightbox" => alcohol.placephoto do %>
+              <%= image_tag alcohol.placephoto.url(:thumb) if alcohol.placephoto? %>
+            <% end %>
           
          </td>
           <td><%= alcohol.kind %></td>
