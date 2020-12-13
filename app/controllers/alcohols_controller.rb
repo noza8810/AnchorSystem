@@ -29,7 +29,7 @@ class AlcoholsController < ApplicationController
   end
   
   def update
-    @alcohol = Alchol.find(params[:id])
+    @alcohol = Alcohol.find(params[:id])
     if @alcohol.update_attributes(alcohol_params)
       flash[:success] = "更新しました。"
       redirect_to alcohols_url
