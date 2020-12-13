@@ -1,5 +1,4 @@
 # README
 
 アンカーシステム
-ドヤ
-いける
+ kokomadekita
