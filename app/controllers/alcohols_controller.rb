@@ -40,7 +40,7 @@ class AlcoholsController < ApplicationController
   end
   
   def destroy
-    @alcohol = Alchol.find(params[:id])
+    @alcohol = Alcohol.find(params[:id])
     @alcohol.destroy
     flash[:success] = "#{@alcohol.name}を削除しました。"
     redirect_to alcohols_url

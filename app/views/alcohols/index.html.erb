@@ -34,7 +34,9 @@
      <% @alcohols.each do |alcohol| %>
       <tr>
          <td>
+           <%= link_to alcohol.image.url, "data-lightbox" => alcohol.image do %>
              <%= image_tag alcohol.image.url if alcohol.image? %>
+           <% end %>
         
          </td>
           
