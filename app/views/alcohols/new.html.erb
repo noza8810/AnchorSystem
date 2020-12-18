@@ -6,22 +6,22 @@
     <%= form_with(model: @alcohol, local: true) do |f| %>
     <%= render 'shared/error_messages' %>
     
-    　<%= f.label :image, class: "label-new" %>
+    　<%= f.label :"ラベル画像", class: "label-new" %>
     　<%= f.file_field :image %>
     　
-      <%= f.label :name, class: "label-new"%>
+      <%= f.label :"名前", class: "label-new"%>
       <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label :price, class: "label-new" %>
+      <%= f.label :"値段", class: "label-new" %>
       <%= f.text_field :price, class: "form-control" %>
       
-      <%= f.label :placephoto, class: "label-new" %>
+      <%= f.label :"お酒の場所", class: "label-new" %>
       <%= f.file_field :placephoto %>
       
-      <%= f.label :kind, class: "label-new" %>
+      <%= f.label :"種類", class: "label-new" %>
       <%= f.text_field :kind, class: "form-control" %>
       
-      <%= f.label :character, class: "label-new" %>
+      <%= f.label :"特徴", class: "label-new" %>
       <%= f.text_field :character, class: "form-control" %>
 
       <%= f.submit "新規登録", class: "btn btn-primary btn-block btn-new-alchol" %>
